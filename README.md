@@ -1,7 +1,7 @@
 # events
 
 [![Build Status](https://travis-ci.org/DocDoc-team/events.svg?branch=master)](https://travis-ci.org/DocDoc-team/events)
-[![Code Coverage](https://scrutinizer-ci.com/g/DocDoc-team/eventsr/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/DocDoc-team/events/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/DocDoc-team/events/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/DocDoc-team/events/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DocDoc-team/events/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/DocDoc-team/events/?branch=master)
 
 ## EventEmitter
