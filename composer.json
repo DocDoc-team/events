@@ -1,0 +1,34 @@
+{
+    "name": "docdoc/events",
+    "description": "Simple events and filters",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "event",
+        "filter",
+        "emitter",
+        "event-emitter",
+        "event-dispatcher"
+    ],
+    "authors": [
+        {
+            "name": "alexpts",
+            "email": "alexpts@yandex.ru"
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3",
+        "blackfire/php-sdk": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "DocDoc\\Event\\": "src"
+        }
+    }
+}

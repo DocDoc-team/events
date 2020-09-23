@@ -1,0 +1,4 @@
+.idea/
+vendor/
+test/clover.xml
+test/*.cache
