@@ -7,10 +7,9 @@ use Exception;
 
 class StopPropagation extends Exception
 {
-    /** @var mixed */
-    public $value;
+    public mixed $value;
 
-    public function setValue($value): self
+    public function setValue(mixed $value): static
     {
         $this->value = $value;
         return $this;
