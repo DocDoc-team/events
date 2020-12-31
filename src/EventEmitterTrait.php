@@ -22,7 +22,7 @@ trait EventEmitterTrait
                     }
                 }
             }
-        } catch (StopPropagation) {
+        } catch (StopPropagation $e) {
             return;
         }
     }
@@ -52,7 +52,7 @@ trait EventEmitterTrait
         $this->listeners[$name] = array_merge(...$sorted);
     }
 
-    public function on(string $name, callable $handler, int $priority = 50, array $extraArgs = []): static
+    public function on(string $name, callable $handler, int $priority = 50, array $extraArgs = []): self
     {
         $this->listeners[$name][] = new EventHandler($handler, $priority, $extraArgs);
         $this->sortEventHandler($name);
@@ -60,7 +60,7 @@ trait EventEmitterTrait
         return $this;
     }
 
-    public function once(string $name, callable $handler, int $priority = 50, array $extraArgs = []): static
+    public function once(string $name, callable $handler, int $priority = 50, array $extraArgs = []): self
     {
         $eventHandler = new EventHandler($handler, $priority, $extraArgs);
         $eventHandler->once = true;
@@ -71,7 +71,7 @@ trait EventEmitterTrait
         return $this;
     }
 
-    public function off(string $event, callable $handler = null, int $priority = null): static
+    public function off(string $event, callable $handler = null, int $priority = null): self
     {
         if ($handler === null) {
             unset($this->listeners[$event]);

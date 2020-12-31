@@ -8,14 +8,18 @@ class EventHandler
     public string $id;
     /** @var callable */
     public $handler;
+    public int $priority = 0;
+    public array $extraArgs = [];
     public bool $once = false;
 
     public function __construct(
         callable $handler,
-        public int $priority = 0,
-        public array $extraArgs = []
+        int $priority = 0,
+        array $extraArgs = []
     ) {
         $this->id = $this->getHandlerId($handler);
+        $this->priority = $priority;
+        $this->extraArgs = $extraArgs;
         $this->handler = $handler;
     }
 
