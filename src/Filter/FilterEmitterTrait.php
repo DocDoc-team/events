@@ -10,7 +10,7 @@ trait FilterEmitterTrait
 {
     use EventEmitterTrait;
 
-    public function emit(string $name, mixed $value, array $args = []): mixed
+    public function emit(string $name, $value, array $args = [])
     {
         try {
             foreach ($this->listeners[$name] ?? [] as $i => $listener) {

@@ -2,6 +2,8 @@ sudo: false
 language: php
 php:
   - 7.4
+  - 8.0snapshot
+  - nightly
 
 before_script:
   - composer self-update
